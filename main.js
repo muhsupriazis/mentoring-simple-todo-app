@@ -2,6 +2,7 @@
 const input = document.getElementById('input-aktifitas');
 const buttonTambah = document.getElementById('tambah'); 
 const tampil = document.getElementById('tampil');
+const hello = document.getElementById('hello');
 
 // ini database array
 let data = [];
@@ -40,6 +41,17 @@ const functionShowData = (data) => {
     buttonEdit.className = 'bg-blue-500 text-white p-1 rounded';
     span.innerHTML = item;
     buttonEdit.onclick = () => {
+      const div = document.createElement('div');
+      const buttonTest = document.createElement('button');
+      const p = document.createElement('p');
+      const input = document.createElement('input');
+      buttonTest.innerHTML = 'test';
+      buttonTest.className = 'bg-blue-500 text-white p-1 rounded';
+      div.appendChild(p);
+      div.appendChild(input);
+      div.appendChild(buttonTest);
+      p.innerHTML = 'Hello World';
+      hello.appendChild(div);
       input.value = item;
       buttonTambah.innerHTML = 'simpan';
       buttonTambah.value = item;
